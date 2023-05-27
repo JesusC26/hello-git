@@ -1,0 +1,21 @@
+git init                         -->  inicializar un repo
+git status                       -->  Ver el status del repo
+git add "nombre del codigo"      -->  Añadir un codigo para su posterior commit (fotografia)
+git commit -m "mensaje des"      -->  Hacer un commit del codigo, con un pequeño mensaje
+git log                          -->  Para saber si el commit se ha realizado
+git log --graph                  -->  Para saber si el commit se ha realizado, verlo como una rama
+
+git log --graph pretty=oneline             --> Ver el historial de commits en una linea
+
+git log --graph --decorate --all --oneline --> Vel el historial de commits, con sus identificadores
+
+git checkout  nombre_archivo -->  Regresarnos a la version anterior sin haber guardado el commit actual
+git reset                    -->  Volver a la ultima fotografia, descartar cambios
+
+
+git config --global alias.subnombre "comando"  --> Configurar un comando   Example: git config --global alias.tree "git log --graph --decorate --all --oneline"
+                                               --> posteriormente para ejecutar el comando largo, solo se ejecuta el subnombre
+
+notepad .gitignore    --> Crear archivo en donde agregaremos los archivos en los que nunca vamos a hacerle un commit
+
+git diff   --> Nos dice que ha cambiado en el codigo
