@@ -1,9 +1,10 @@
-git init                         -->  inicializar un repo
-git status                       -->  Ver el status del repo
-git add "nombre del codigo"      -->  Añadir un codigo para su posterior commit (fotografia)
-git commit -m "mensaje des"      -->  Hacer un commit del codigo, con un pequeño mensaje
-git log                          -->  Para saber si el commit se ha realizado
-git log --graph                  -->  Para saber si el commit se ha realizado, verlo como una rama
+git init                                         -->  inicializar un repo
+git status                                       -->  Ver el status del repo
+git add "nombre del fichero para commitear"      -->  Añadir un codigo para su posterior commit (fotografia)
+git add .                                        --> Añade todos los ficheros para ser commiteados, sin la necesidad de añadir uno por uno
+git commit -m "mensaje des"                      -->  Hacer un commit del codigo, con un pequeño mensaje
+git log                                          -->  Para saber si el commit se ha realizado
+git log --graph                                  -->  Para saber si el commit se ha realizado, verlo como una rama
 
 git log --graph pretty=oneline             --> Ver el historial de commits en una linea
 
@@ -19,3 +20,37 @@ git config --global alias.subnombre "comando"  --> Configurar un comando   Examp
 notepad .gitignore    --> Crear archivo en donde agregaremos los archivos en los que nunca vamos a hacerle un commit
 
 git diff   --> Nos dice que ha cambiado en el codigo
+
+git reset --hard Id_command      -->   Regresar o ir hacia adelante, a un commit anterior y borrar los commit que se hicieron despues de ese commit (borrando los commits que hay delante)
+git reflog                       -->   Muestra el historial de los commits que se han echo (hacia adelante y hacia atras)
+git revert                        -->   Borra un commit en especifico
+
+git tag                          -->   Nos muestra las etiquetas que hemos echo
+git tag nombre_tag               -->   Etiquetar con un nombre algún commit
+git checkout tags/nombre_tag     -->   Nos vamos a un tag deseado
+
+
+-RAMAS (branchs)
+git branch                               -->   Nos muestra las ramas que hay actualmente
+git branch nombre_branch                 -->   Crea una nueva rama
+git switch nombre_branch                 -->   Moverse hacia una rama
+git merge nombre_rama_me_gustaria_tener  -->   Combinar los cambios entre ramas
+
+
+- Conflictos, cuando hay varias ramas y un equipo (POR ERROR) ha tocado la misma linea de codigo que el otro equipo ha tocado, git no sabe a que branch hacerle caso (hay dos modoficaciones en dos ramas)
+Para arreglarlo simpelente se modifica el codigo al codigo correcto se añade y se commitea
+Esto sucede cuando queremos hacer un merge en una rama
+
+
+git stash        --> nos permite guardar un fichero en una rama (cuando intentamos cambiar de rama), sin la necesidad de commitearlo por que aun no lo hemos teminado
+git stash list   --> Ver los ficheros que hemos guardado (no commit)
+git stash pop    --> Nos regresa a los ficheros que hemos guardado
+git stash drop   --> Borrar los stash que hemos realizado
+
+git diff nombre_branch  --> Mostrar la diferencia entre dos ramas
+git checkout name_fiche --> Descartar cambios en un fichero
+
+- Eliminar ramas que ya se terminaron e integraron en la rama main
+git branch -d nombre_branch -->  Eliminar una rama
+
+
